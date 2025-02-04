@@ -34,7 +34,7 @@ jobs:
       - name: Publish
         run: PUBLISH_GRAPH=true npm run start
         env:
-          DEVTOOLS_API_KEY: CHANGE_THIS_TO_YOUR_API_KEY
           REPOSITORY_NAME: ${{ github.event.repository.name }}
           BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
           TARGET_SHA: ${{ github.event.pull_request.base.sha }}
+          GITHUB_REPOSITORY_OWNER: ${{ env.GITHUB_REPOSITORY_OWNER }}

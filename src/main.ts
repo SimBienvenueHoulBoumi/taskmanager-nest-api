@@ -4,7 +4,6 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  // Configuration de Swagger
   const config = new DocumentBuilder()
     .setTitle('Tasks API')
     .setDescription('The tasks API description')
